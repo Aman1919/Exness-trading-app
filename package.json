@@ -1,5 +1,5 @@
 {
-  "name": "Trading-app",
+  "name": "trading-app",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -10,13 +10,13 @@
   },
   "devDependencies": {
     "prettier": "^3.7.4",
-    "turbo": "^2.7.3",
+    "turbo": "^2.7.5",
     "typescript": "5.9.2"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "npm@10.8.2",
   "workspaces": [
     "apps/*",
     "packages/*"
