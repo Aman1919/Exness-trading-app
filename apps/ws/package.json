@@ -1,8 +1,9 @@
 {
-  "name": "ws",
+  "name": "ws-server",
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
+    "dev":"npx tsx --watch ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,11 +12,13 @@
   "description": "",
   "dependencies": {
     "@repo/db": "*",
-    "@types/ws": "^8.18.1",
-    "ws": "^8.19.0"
+    "axios": "^1.13.2",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*"
+    "@repo/typescript-config": "*",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.9.3"
   }
 }

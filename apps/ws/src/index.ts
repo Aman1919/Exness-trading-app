@@ -1,18 +1,23 @@
-import WebSocket, { WebSocketServer } from 'ws';
+import Websocket,{WebSocketServer} from "ws"
+import {getAllAssests} from "./tradingapp"
+console.log("Starting WS server...");
 
+const wss = new WebSocketServer({ port: 8080 });
 
-const wss = new WebSocket.Server({ port: 5000 });
+console.log("WS server running on ws://localhost:8080");
 
-wss.on("connection", (ws:any) => {
+wss.on("connection", (ws:Websocket) => {
   console.log("Client connected");
 
-  ws.on("message", (data:any) => {
+  ws.on("message", async (data:any) => {
     console.log("data from the client:", data.toString());
-
+    const d = await getAllAssests();
+    console.log(d)
     ws.send(
       JSON.stringify({
         type: "test",
         message: "hello world",
+        data:d
       })
     );
   });
